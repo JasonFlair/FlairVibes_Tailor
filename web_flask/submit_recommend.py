@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-from flask import Flask
+
+"""file used for tests and planning"""
+from flask import Flask, request, abort
 import requests
 
 app = Flask(__name__)
 
+@app.route('/submit', methods=['POST'], strict_slashes=False)
 def submit_song():
     """gets the song details from user and works using the details"""
     song_name = input("Enter song name: ").replace(".", "")
     artist = input("Enter artist name: ")
     print()
     headers = {
-        "Authorization": "Bearer BQCEGwHr7B8ISalWrK27Al-Z_pOAyTNN7bDkX8mBRLr66sQXXWeErceeSpxzBBZiGRHhI54AWH5TlW27oXdMRMPYDVhI34I8MhtRrVJpLIUqgLiKViQj1U3rBeB1Cd_G9yAqTNzrNTS4MaHAcpmYA5g6aAR9wOrIh-gZ-8Batrc4Bcl90-SkBfQ1c7XIvhzAVppC"}
+        "Content-Type": "application/json",
+        "Authorization": "Bearer BQD_bPQ2H-U9JK2pD876Sy5ZTcmbLpsjfmIS10Vdhe4pJdpazIwTNIRIiRBySu3U_klAvITz4GO3Wk1AxJrAMzp3uE_B0JVK5NV0CDxwEXT-Xt62jHQ7zmkSR74pUB_FpDBi_9Yp7Z96yZxmzPVv4eb3FyHKG97njo4uzfhYqSdR8fDMt2LG8_bWHUlwYcLzx-ig"}
     search_song_url = f"https://api.spotify.com/v1/search?q={song_name}+ artist:{artist}&type=track"
     response = requests.get(search_song_url, headers=headers)
     json_resp = response.json()
     track_id = json_resp['tracks']['items'][0]['id']
     artist_id = json_resp['tracks']['items'][0]['album']['artists'][0]['id']
+    print(artist_id)
     """print(track_id)
     print()
     print(artist_id)
@@ -33,12 +38,13 @@ def submit_song():
     print(f"tempo: {tempo}")
     print(f"key: {key}")"""
 
-    get_recommendations(danceability, tempo, key, track_id, artist_id, song_name)
+    recommendations = get_recommendations(danceability, tempo, key, track_id, artist_id, song_name)
+    return recommendations
 
 def get_recommendations(danceability, tempo, key, track_id, artist_id, song_name):
 
     """gets recommendations based on parameters passed"""
-    headers = { "Authorization": "Bearer BQCEGwHr7B8ISalWrK27Al-Z_pOAyTNN7bDkX8mBRLr66sQXXWeErceeSpxzBBZiGRHhI54AWH5TlW27oXdMRMPYDVhI34I8MhtRrVJpLIUqgLiKViQj1U3rBeB1Cd_G9yAqTNzrNTS4MaHAcpmYA5g6aAR9wOrIh-gZ-8Batrc4Bcl90-SkBfQ1c7XIvhzAVppC"}
+    headers = { "Authorization": "Bearer BQAitfSE5IDoDF8xY6AVDchUIArNB2qo7m1PVAZ5Hg-uqmg2_rqQB4tTL3p-ZdGYw0-L3gBbZLIBnqMKOKjvCFNfeIjuyrk3fV6MEkMTL-GyAH_JNYAMek0VQFnsywQkLbjghrzqsjRh0Cn7PwtO-kelc8MzcVifXiZnMd5aLD60ZTHEdjI-eWGROZcsBb8vfuA1"}
 
     min_danceability = danceability - 0.031
     max_danceability = danceability + 0.3
@@ -59,15 +65,19 @@ def get_recommendations(danceability, tempo, key, track_id, artist_id, song_name
 
     print(f"based on your favourite song, {song_name}, here are some songs we think you might like:")
     print()
+    recommended_tracks = []
     for track in recommendations_json['tracks']:
         artist = track['artists'][0]['name']
         track_title = track['name']
         track_title = track_title.replace(".", "")
         if track_title.lower() != song_name.lower():
-            print(f"{track_title} by {artist}")
+            recommended_tracks.append(f"{track_title} by {artist}")
+    recommended_tracks_json = {"tracks": recommended_tracks}
+    return recommended_tracks_json
 
 
 
 
 if __name__ == "__main__":
     submit_song()
+    app.run(host='0.0.0.0', port=5000)
