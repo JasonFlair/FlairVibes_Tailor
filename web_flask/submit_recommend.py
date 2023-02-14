@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""file used for tests and planning should not be expected to work
+    as a lot here is pseudocode and stuff being worked out"""
 
-"""file used for tests and planning"""
 from flask import Flask, request, abort
 import requests
 
@@ -9,13 +10,37 @@ app = Flask(__name__)
 @app.route('/submit', methods=['POST'], strict_slashes=False)
 def submit_song():
     """gets the song details from user and works using the details"""
-    song_name = input("Enter song name: ").replace(".", "")
+
+    # get an access token whenever a user uses the service using client id and secret
+    client_id = getenv("CLIENT_ID")
+    client_secret = getenv("CLIENT_SECRET")
+
+    auth_header = base64.b64encode(f"{client_id}:{client_secret}".encode("utf-8"))
+    # make request to spotify api to get an access token
+    token_resp = requests.post("https://accounts.spotify.com/api/token",
+                               headers={"Authorization": f"Basic {auth_header.decode('utf-8')}"},
+                               data={"grant_type": "client_credentials"})
+    access_token = token_resp.json()['access_token']
+
+    # Get the data from the POST request
+    if request.get_json() is None:
+        abort(400, "Not a json")
+    data = request.get_json()
+    song_name = data.get('song_name')
+    artist = data.get('artist')
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {access_token}"}
+    search_song_url = f"https://api.spotify.com/v1/search?q={song_name}+ artist:{artist}&type=track"
+
+    """song_name = input("Enter song name: ").replace(".", "")
     artist = input("Enter artist name: ")
     print()
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer BQD_bPQ2H-U9JK2pD876Sy5ZTcmbLpsjfmIS10Vdhe4pJdpazIwTNIRIiRBySu3U_klAvITz4GO3Wk1AxJrAMzp3uE_B0JVK5NV0CDxwEXT-Xt62jHQ7zmkSR74pUB_FpDBi_9Yp7Z96yZxmzPVv4eb3FyHKG97njo4uzfhYqSdR8fDMt2LG8_bWHUlwYcLzx-ig"}
+        "Authorization": "Bearer {bearer token}"}
     search_song_url = f"https://api.spotify.com/v1/search?q={song_name}+ artist:{artist}&type=track"
+    """
     response = requests.get(search_song_url, headers=headers)
     json_resp = response.json()
     track_id = json_resp['tracks']['items'][0]['id']
@@ -44,7 +69,7 @@ def submit_song():
 def get_recommendations(danceability, tempo, key, track_id, artist_id, song_name):
 
     """gets recommendations based on parameters passed"""
-    headers = { "Authorization": "Bearer BQAitfSE5IDoDF8xY6AVDchUIArNB2qo7m1PVAZ5Hg-uqmg2_rqQB4tTL3p-ZdGYw0-L3gBbZLIBnqMKOKjvCFNfeIjuyrk3fV6MEkMTL-GyAH_JNYAMek0VQFnsywQkLbjghrzqsjRh0Cn7PwtO-kelc8MzcVifXiZnMd5aLD60ZTHEdjI-eWGROZcsBb8vfuA1"}
+    headers = { "Authorization": "Authorization"}
 
     min_danceability = danceability - 0.031
     max_danceability = danceability + 0.3

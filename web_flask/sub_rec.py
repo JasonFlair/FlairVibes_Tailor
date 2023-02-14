@@ -32,7 +32,7 @@ def submit_song():
     if request.get_json() is None:
         abort(400, "Not a json")
     data = request.get_json()
-    song_name = data.get('song_name')
+    song_name = data.get('song_name').replace(".", "").replace("?", "")
     artist = data.get('artist')
     headers = {
         "Content-Type": "application/json",
@@ -74,7 +74,7 @@ def submit_song():
     for track in recommendations_json['tracks']:
         artist = track['artists'][0]['name']
         track_title = track['name']
-        track_title = track_title.replace(".", "")
+        track_title = track_title.replace(".", "").replace("?", "")
         if track_title.lower() != song_name.lower():
             recommended_tracks.append(f"{track_title} by {artist}")
     recommended_tracks_json = {"tracks": recommended_tracks}
