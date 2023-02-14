@@ -17,7 +17,7 @@ $(document).ready(function(){
             success: function(response) {
                 $('section.recommendations').empty();
                 let tracks = response['tracks'];
-                let message = `<h4>Based on your favourite song, ${songTitle}, here are some songs we think you might like!</h4>`;
+                let message = `<h4>Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
                 console.log(message);
                 $('section.recommendations').append(message);
                 for (track of tracks) {
