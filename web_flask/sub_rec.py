@@ -5,12 +5,28 @@
 from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 import requests
+import base64
 
 app = Flask(__name__)
 cors = CORS(app)
 
 @app.route('/submit_song', methods=['POST'])
 def submit_song():
+    """an end point that receives submitted songs and then gets audio info for those songs
+        and then makes requests to spotify's recommendations endpoint"""
+
+    # get an access token whenever a user uses the service using client id and secret
+    client_id = "client id"
+    client_secret = "client secret"
+
+    auth_header = base64.b64encode(f"{client_id}:{client_secret}".encode("utf-8"))
+    # make request to spotify api to get an access token
+    token_resp = requests.post("https://accounts.spotify.com/api/token",
+                             headers={"Authorization": f"Basic {auth_header.decode('utf-8')}"},
+                             data={"grant_type": "client_credentials"})
+    access_token = token_resp.json()['access_token']
+
+
     # Get the data from the POST request
     if request.get_json() is None:
         abort(400, "Not a json")
@@ -19,7 +35,7 @@ def submit_song():
     artist = data.get('artist')
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer {bearer token}"}
+        "Authorization": f"Bearer {access_token}"}
     search_song_url = f"https://api.spotify.com/v1/search?q={song_name}+ artist:{artist}&type=track"
 
     # Make the GET request to spotify
@@ -53,8 +69,6 @@ def submit_song():
     recommendations_resp = requests.get(recommendations_url, headers=headers)
     recommendations_json = recommendations_resp.json()
 
-    print(f"based on your favourite song, {song_name}, here are some songs we think you might like:")
-    print()
     recommended_tracks = []
     for track in recommendations_json['tracks']:
         artist = track['artists'][0]['name']
