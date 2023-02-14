@@ -5,8 +5,6 @@ $(document).ready(function(){
         event.preventDefault();
         let songTitle = $('#song_title').val();
         let artistName = $('#artist_name').val();
-        console.log(songTitle)
-        console.log(artistName)
         query_data['song_name'] = songTitle;
         query_data['artist'] = artistName;
         console.log(query_data)
@@ -19,7 +17,8 @@ $(document).ready(function(){
             success: function(response) {
                 $('section.recommendations').empty();
                 let tracks = response['tracks'];
-                let message = `<h4>Here are some songs we think you might like!</h4>`;
+                let message = `<h4>Based on your favourite song, ${songTitle}, here are some songs we think you might like!</h4>`;
+                console.log(message);
                 $('section.recommendations').append(message);
                 for (track of tracks) {
                     let recommendations = `
@@ -28,6 +27,7 @@ $(document).ready(function(){
                 }
             },
             error: function(tokenErr, textStatus, errorThrown) {
+                $('section.recommendations').empty();
                 if (tokenErr.status === 400) {
                 // handle error
                 let message = `<h4>oops something went wrong, please try again some other time</h4>`;
