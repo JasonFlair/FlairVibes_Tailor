@@ -41,6 +41,11 @@ li {
     background-color: chocolate;
 }
 
+#submit_button:active {
+    transform: scale(0.98);
+}
+
+
 button:hover {
     background-color: brown;
 }
