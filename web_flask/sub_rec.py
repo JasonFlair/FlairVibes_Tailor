@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 import requests
 import base64
+from os import getenv
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -16,8 +17,8 @@ def submit_song():
         and then makes requests to spotify's recommendations endpoint"""
 
     # get an access token whenever a user uses the service using client id and secret
-    client_id = "client id"
-    client_secret = "client secret"
+    client_id = getenv("CLIENT_ID")
+    client_secret = getenv("CLIENT_SECRET")
 
     auth_header = base64.b64encode(f"{client_id}:{client_secret}".encode("utf-8"))
     # make request to spotify api to get an access token
