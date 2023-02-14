@@ -23,7 +23,7 @@ The track details, audio features, and recommendations used in this project are 
 1. Clone the repository:
    git clone https://github.com/jasonflair/flairvibes-tailor.git
 2. Change into the project directory:
-   cd flairvibes-tailor
+   cd FlairVibes_Tailor
 
 # Author
 Chukwuemelie 'Jason Flair' Obumse. Email - emelieobumse100@gmail.com, Twitter handle - <a href="https://twitter.com/jasonffs_" target="_blank"> My Twitter</a>
