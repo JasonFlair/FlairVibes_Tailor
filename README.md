@@ -12,11 +12,9 @@ This project serves as my portfolio project and showcases some of my skills in w
 # Built With
 - <a href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank">Flask</a> - The web framework used
 - <a href="https://docs.python-requests.org/en/latest/" target="_blank">Requests</a> - A python library for making HTTP requests
- - A python library for making HTTP requests
-<a href="https://flask-cors.readthedocs.io/en/latest/" target="_blank">Flask-CORS</a>
- - Flask extension for handling Cross Origin Resource Sharing (CORS)
- - <a href="https://api.jquery.com/" target="_blank">jQuery</a> - Used to make the song recommendations render dynamically
- - <a href="https://developer.spotify.com/" target="_blank">Spotify's api</a> - Used to explore audio features and audio analysis of tracks
+- <a href="https://flask-cors.readthedocs.io/en/latest/" target="_blank">Flask-CORS</a> - Flask extension for handling Cross Origin Resource Sharing (CORS)
+- <a href="https://api.jquery.com/" target="_blank">jQuery</a> - Used to make the song recommendations render dynamically
+- <a href="https://developer.spotify.com/" target="_blank">Spotify's api</a> - Used to explore audio features and audio analysis of tracks
 
 # Data Source
 The track details, audio features, and recommendations used in this project are provided by Spotify and harnessed through Spotify's api
