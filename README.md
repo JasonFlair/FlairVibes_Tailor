@@ -26,7 +26,7 @@ The track details, audio features, and recommendations used in this project are 
    cd flairvibes-tailor
 
 # Author
-Chukwuemelie 'Jason Flair' Obumse. email - emelieobumse100@gmail.com, twitter handle - <a href="https://twitter.com/jasonffs_" target="_blank"> My Twitter</a>
+Chukwuemelie 'Jason Flair' Obumse. Email - emelieobumse100@gmail.com, Twitter handle - <a href="https://twitter.com/jasonffs_" target="_blank"> My Twitter</a>
 
 # License
 This project is open for reading. However, if you wish to use any part of this project for commercial or public use, please obtain permission from the author. Unauthorized use of this project is strictly prohibited.
