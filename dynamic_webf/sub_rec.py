@@ -11,7 +11,7 @@ from os import getenv
 app = Flask(__name__)
 cors = CORS(app)
 
-@app.route('/submit_song', methods=['POST'])
+@app.route('/submit_song', methods=['POST'], strict_slashes=False)
 def submit_song():
     """an end point that receives submitted songs and then gets audio info for those songs
         and then makes requests to spotify's recommendations endpoint"""
