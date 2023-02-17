@@ -1,14 +1,16 @@
 body {
-    font-family: Circular, "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica;
     display: inline;
     text-align: center;
-    background-color: blueviolet;
+    background-color: #66cc66;
+    color: purple;
 }
 
 li {
   list-style-type: none;
-  font-family: Raleway;
+  font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica, Raleway;
   font-style: italic;
+  font-weight: medium;
   text-shadow: 3px 2px 3px 1px blue;
 }
 
@@ -25,13 +27,13 @@ li {
 }
 .recommendations h4 {
     font-weight: 500;
-    font-family: Raleway;
+    font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica, Raleway;
     text-shadow: 5px 2px 3px 2px black;
 }
 
 form input {
     border: None;
-    box-shadow: 3px 2px 3px 2px purple;
+    box-shadow: 3px 2px 3px 2px #39ac39;
 }
 
 ::-webkit-input-placeholder {
