@@ -50,6 +50,15 @@ form input {
     background-color: chocolate;
     cursor: pointer;
 }
+#goagainButton {
+    font-style: italic;
+    text-align: center;
+    width: 145px;
+    height: 30px;
+    margin-top: 15px;
+    background-color: chocolate;
+    cursor: pointer;
+}
 
 #submit_button:active {
     transform: scale(0.90);
