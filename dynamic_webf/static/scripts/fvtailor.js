@@ -41,8 +41,8 @@ $(document).ready(function(){
                 let message = `<h4>oops something went wrong, please try again some other time</h4>`;
                 $('section.recommendations').append(message);
                 } else if (tokenErr.status === 500) {
-                    let message = `<h4>oops something went wrong, please check your spellings</h4>
-                                    <p>note: the song submited might not be present on major streaming services like apple music and spotify</p>`;
+                    let message = `<h4>oops something went wrong, please check your submitted details</h4>
+                                    <p>note: the song submited might not be present on major streaming services like apple music and/or spotify</p>`;
                     $('section.recommendations').append(message);
                 }
             }
