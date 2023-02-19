@@ -21,12 +21,16 @@ The track details, audio features, and recommendations used in this project are 
 
 # Getting Started
 1. Clone the repository:
+
    `git clone https://github.com/jasonflair/flairvibes-tailor.git`
 2. Change into the project directory:
+
    `cd FlairVibes_Tailor`
 3. Run the flask app that renders the html template:
+
    `python3 -m dynamic_webf.flairvibestailor`
 4. Run the flask app that handles the submission of data and retrieves recommendations with env variables:
+
    `CLIENT_ID='your_spotify_clientid' CLIENT_SECRET='your_spotify_clientsecret' python3 -m dynamic_webf.sub_rec`
 
 # Author
