@@ -32,7 +32,7 @@ def submit_song():
     if request.get_json() is None:
         abort(400, "Not a json")
     data = request.get_json()
-    song_name = data.get('song_name').replace(".", "").replace("?", "")
+    song_name = data.get('song_name').replace(".", "").replace("?", "").strip()
     artist = data.get('artist')
     headers = {
         "Content-Type": "application/json",
