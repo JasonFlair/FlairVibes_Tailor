@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const apiUrl = 'http://' + location.hostname + ':5000/submit_song';
+    const apiUrl = 'http://' + location.hostname + ':5006/submit_song';
     let query_data = {}
     $('form#submit_songs').submit(function(event) {
         event.preventDefault();
