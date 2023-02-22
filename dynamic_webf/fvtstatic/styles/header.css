@@ -20,3 +20,17 @@ header hr {
     margin-left: 45%;
     filter: contrast(100%);
 }
+@media screen and (max-width: 375px) and (max-height: 812px) {
+    header {
+        width: 75%;
+    }
+    .logo {
+    background-size: 80px 70px;
+    height: 80%;
+    margin-left: 35%;
+    margin-top: 15px;
+    }
+    header hr {
+        width: 85%;
+    }
+}
