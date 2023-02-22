@@ -16,10 +16,10 @@ footer hr {
 @media screen and (max-width: 375px) and (max-height: 812px) {
     footer {
         margin-top: 95px;
-        width: 75%;
+        width: 90%;
     }
     footer hr {
-    width: 85%;
+    width: 90%;
     }
     footer p {
         font-size: 10px;

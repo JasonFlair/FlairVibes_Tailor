@@ -22,7 +22,7 @@ header hr {
 }
 @media screen and (max-width: 375px) and (max-height: 812px) {
     header {
-        width: 75%;
+        width: 90%;
     }
     .logo {
     background-size: 80px 70px;
@@ -31,6 +31,6 @@ header hr {
     margin-top: 15px;
     }
     header hr {
-        width: 85%;
+        width: 90%;
     }
 }
