@@ -80,7 +80,7 @@ input {
 
 @media screen and (max-width: 375px) and (max-height: 812px) {
     .container {
-        width: 75%;
+        width: 90%;
     }
     .welcome h2{
         font-size: 18px;
