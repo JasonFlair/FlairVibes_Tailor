@@ -82,6 +82,7 @@ input {
     .container {
         width: 90%;
         margin-left: 20px;
+        margin-top: 130px;
     }
     .welcome h2{
         font-size: 20px;
