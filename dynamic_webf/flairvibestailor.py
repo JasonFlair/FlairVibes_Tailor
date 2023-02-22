@@ -3,7 +3,7 @@
 from flask import Flask, render_template
 from uuid import uuid4
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='fvtstatic')
 
 @app.route('/fvt', methods=['GET'], strict_slashes=False)
 def flairvibes():
