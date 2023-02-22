@@ -135,3 +135,21 @@ input {
     }
 
 }
+@media screen and (max-width: 414px) and (max-height: 736px) {
+    .welcome p {
+        font-size: 12px;
+    }
+    .submission h4 {
+        font-weight: medium;
+        font-size: 11px;
+        margin-top: -14px;
+    }
+    form input {
+        border: None;
+        box-shadow: 3px 2px 3px 2px #39ac39;
+        width: 185px;
+        height: 40px;
+        font-size: 9px;
+        margin-bottom: 1px;
+    }
+}

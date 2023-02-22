@@ -35,3 +35,31 @@ header hr {
         width: 87%;
     }
 }
+@media screen and (max-width: 414px) and (max-height: 736px) {
+    header {
+        width: 97%;
+    }
+    .logo {
+    background-size: 80px 70px;
+    height: 80%;
+    margin-left: 38.4%;
+    margin-top: 17px;
+    }
+    header hr {
+        width: 87%;
+    }
+}
+@media screen and (max-width: 412px) and (max-height: 914px) {
+    header {
+        width: 97%;
+    }
+    .logo {
+    background-size: 80px 70px;
+    height: 80%;
+    margin-left: 40%;
+    margin-top: 17px;
+    }
+    header hr {
+        width: 87%;
+    }
+}
