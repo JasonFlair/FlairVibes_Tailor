@@ -19,6 +19,7 @@ $(document).ready(function(){
                 $('section.submission').empty();
                 $('section.recommendations').empty();
                 let tracks = response['tracks'];
+                console.log(tracks)
                 let thankYouNote = `<h2>Thank you for using FlairVibes Tailor</h2>`
                 let message = `<h4>Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
                 let goagainButton = `<form>
@@ -28,8 +29,11 @@ $(document).ready(function(){
                 $('section.welcome').append(thankYouNote);
                 $('section.recommendations').append(message);
                 for (track of tracks) {
+                    parsedTrack = JSON.parse(track)
                     let recommendations = `
-                    <li>${track}</li>`;
+                    <li><b>${parsedTrack['title']}</b> by ${parsedTrack['artist']}
+                    <p class="listtext"> listen to <a href="${parsedTrack['link']}" target="_blank"> ${parsedTrack['title']}</a> on spotify</p>
+                    </li>`;
                     $('section.recommendations').append(recommendations);
                 }
                 $('section.recommendations').append(goagainButton);
