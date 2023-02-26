@@ -1,4 +1,4 @@
-# FlairVibes Tailor - Music Recommender
+# Flair Vibes Tailor - Music Recommender
 A simple web application that allows you to submit your favorite song and get recommended songs that match your taste in music.
 
 This project serves as my portfolio project and showcases some of my skills in web development.

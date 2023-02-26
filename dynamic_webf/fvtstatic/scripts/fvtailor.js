@@ -25,7 +25,6 @@ $(document).ready(function(){
                 let goagainButton = `<form>
                     <input type="submit" value="ouu i wanna go again!" id="goagainButton">
                 </form>`
-                console.log(message);
                 $('section.welcome').append(thankYouNote);
                 $('section.recommendations').append(message);
                 for (track of tracks) {

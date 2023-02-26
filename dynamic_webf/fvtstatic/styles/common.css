@@ -6,12 +6,26 @@ body {
     color: purple;
 }
 
+section.hero{
+    margin-top: 150px;
+}
+.hero p {
+    font-size: large;
+    font-weight: 540;
+}
+
+main {
+    width: 90%;
+    margin-left: 5%;
+}
+
 li {
   list-style-type: none;
   font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica, Raleway;
   font-style: italic;
   font-weight: medium;
   text-shadow: 3px 2px 3px 1px blue;
+  margin-bottom: 4px;
 }
 
 .listtext {
@@ -43,6 +57,15 @@ form input {
 ::-webkit-input-placeholder {
     font-style: italic;
     text-align: center;
+}
+
+#tryit_button {
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    margin-top: 15px;
+    background-color: chocolate;
+    cursor: pointer;
 }
 
 #submit_button {
