@@ -20,8 +20,9 @@ main {
 }
 
 img {
-    width: 360px;
-    height: 300px;
+    width: 80%;
+    height: 20%;
+    box-shadow: 3px 1px 3px 1px gray
 }
 
 .rectext {
