@@ -9,6 +9,17 @@ body {
 section.hero{
     margin-top: 150px;
 }
+
+.hiw {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.cta {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
 .hero p {
     font-size: large;
     font-weight: 540;
@@ -26,7 +37,7 @@ img {
 }
 
 .rectext {
-    margin-top: 20px;
+    margin-top: -50px;
 }
 
 li {
@@ -51,6 +62,10 @@ li {
     margin-top: 70px;
     border-top: 1px;
 }
+
+.step {
+    margin-bottom: 50px;
+}
 .submission h4 {
     font-weight: medium;
 }
@@ -58,6 +73,10 @@ li {
     font-weight: 500;
     font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica, Raleway;
     text-shadow: 5px 2px 3px 2px black;
+}
+
+.thankyounote {
+    margin-top: 55px;
 }
 
 form input {
@@ -77,6 +96,8 @@ form input {
     margin-top: 15px;
     background-color: chocolate;
     cursor: pointer;
+    border: none;
+    box-shadow: 2px 1px 2px 1px #39ac39;
 }
 
 #submit_button {
@@ -102,6 +123,10 @@ form input {
 }
 
 #submit_button:active {
+    transform: scale(0.90);
+}
+
+#tryit_button:active {
     transform: scale(0.90);
 }
 
