@@ -21,7 +21,7 @@ $(document).ready(function(){
                 let tracks = response['tracks'];
                 console.log(tracks)
                 let thankYouNote = `<h2>Thank you for using FlairVibes Tailor</h2>`
-                let message = `<h4>Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
+                let message = `<h4 class="rectext">Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
                 let goagainButton = `<form>
                     <input type="submit" value="ouu i wanna go again!" id="goagainButton">
                 </form>`

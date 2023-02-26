@@ -19,6 +19,15 @@ main {
     margin-left: 5%;
 }
 
+img {
+    width: 360px;
+    height: 300px;
+}
+
+.rectext {
+    margin-top: 20px;
+}
+
 li {
   list-style-type: none;
   font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica, Raleway;
