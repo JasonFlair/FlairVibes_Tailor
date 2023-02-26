@@ -30,6 +30,7 @@ li {
 
 .listtext {
     font-size: smaller;
+    margin-top: -3px;
 }
 
 .container {
