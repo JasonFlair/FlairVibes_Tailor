@@ -97,6 +97,7 @@ form input {
     background-color: chocolate;
     cursor: pointer;
     border: none;
+    color: black;
     box-shadow: 2px 1px 2px 1px #39ac39;
 }
 
@@ -141,11 +142,68 @@ input {
     text-align: center;
 }
 
+
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+    .welcome p {
+        font-size: 13px;
+    }
+
+    .hero p {
+        font-size: large;
+        font-weight: 400;
+    }
+
+    .submission h4 {
+        font-weight: medium;
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-top: -3px;
+    }
+    form input {
+        border: None;
+        box-shadow: 3px 2px 3px 2px #39ac39;
+        width: 185px;
+        height: 40px;
+        font-size: 9px;
+        margin-bottom: 1px;
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 736px) {
+    .welcome {
+        margin-top: -11px;
+    }
+    .welcome p {
+        font-size: 12px;
+    }
+
+    .hero p {
+        font-size: large;
+        font-weight: 400;
+    }
+
+    .submission h4 {
+        font-weight: medium;
+        font-size: 11px;
+        margin-top: -14px;
+    }
+    form input {
+        border: None;
+        box-shadow: 3px 2px 3px 2px #39ac39;
+        width: 185px;
+        height: 40px;
+        font-size: 9px;
+        margin-bottom: 1px;
+    }
+}
+
 @media screen and (max-width: 375px) and (max-height: 812px) {
     .container {
         width: 90%;
         margin-left: 20px;
-        margin-top: 130px;
+        margin-top: 150px;
     }
     .welcome h2{
         font-size: 20px;
@@ -153,6 +211,10 @@ input {
     }
     .welcome p{
         font-size: 10px;
+    }
+    .hero p {
+        font-size: large;
+        font-weight: 400;
     }
     #submit_button {
         font-style: italic;
@@ -199,47 +261,7 @@ input {
     }
 
 }
-@media screen and (max-width: 414px) and (max-height: 736px) {
-    .welcome {
-        margin-top: -11px;
-    }
-    .welcome p {
-        font-size: 12px;
-    }
-    .submission h4 {
-        font-weight: medium;
-        font-size: 11px;
-        margin-top: -14px;
-    }
-    form input {
-        border: None;
-        box-shadow: 3px 2px 3px 2px #39ac39;
-        width: 185px;
-        height: 40px;
-        font-size: 9px;
-        margin-bottom: 1px;
-    }
-}
-@media screen and (max-width: 414px) and (max-height: 896px) {
-    .welcome p {
-        font-size: 13px;
-    }
-    .submission h4 {
-        font-weight: medium;
-        font-size: 13px;
-        margin-left: 10px;
-        margin-right: 5px;
-        margin-top: -3px;
-    }
-    form input {
-        border: None;
-        box-shadow: 3px 2px 3px 2px #39ac39;
-        width: 185px;
-        height: 40px;
-        font-size: 9px;
-        margin-bottom: 1px;
-    }
-}
+
 @media screen and (max-width: 375px) and (max-height: 667px) {
     .welcome {
         margin-top: -11px;
@@ -247,6 +269,10 @@ input {
 
     .welcome h2{
         font-size: 19px;
+    }
+    .hero p {
+        font-size: large;
+        font-weight: 400;
     }
     .welcome p {
         font-size: 12px;
