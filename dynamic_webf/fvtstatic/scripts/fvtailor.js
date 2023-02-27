@@ -30,9 +30,11 @@ $(document).ready(function(){
                 for (track of tracks) {
                     parsedTrack = JSON.parse(track)
                     let recommendations = `
+                    <ul class="reclist">
                     <li><b>${parsedTrack['title']}</b> by ${parsedTrack['artist']}
                     <p class="listtext"> listen to <a href="${parsedTrack['link']}" target="_blank"> ${parsedTrack['title']}</a> on spotify</p>
-                    </li>`;
+                    </li>
+                    </ul>`;
                     $('section.recommendations').append(recommendations);
                 }
                 $('section.recommendations').append(goagainButton);
