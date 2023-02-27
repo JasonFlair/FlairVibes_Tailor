@@ -14,6 +14,7 @@ section.hero{
     list-style: none;
 }
 
+
 nav {
     display: flex; /* set the display property to flex */
     justify-content: center; /* center the items horizontally */
@@ -75,13 +76,16 @@ img {
     margin-top: -50px;
 }
 
-li {
+.reclist li {
   list-style-type: none;
   font-family: "Courier New", Courier, sans-serif, Circular, "Helvetica Neue",Helvetica, Raleway;
   font-style: italic;
   font-weight: medium;
   text-shadow: 3px 2px 3px 1px blue;
   margin-bottom: 15px;
+  justify-content: center; /* center the items horizontally */
+  align-items: center; /* center the items vertically */
+  margin-left: -50px;
 }
 
 .listtext {
@@ -217,6 +221,10 @@ input {
         font-size: 9px;
         margin-bottom: 1px;
     }
+    .reclist {
+        list-style: none;
+        margin-left: 5px;
+    }
 }
 
 
@@ -307,6 +315,10 @@ input {
         font-weight: medium;
         font-size: 11px;
         margin-top: -16px;
+    }
+    .reclist {
+        list-style: none;
+        margin-left: 5px;
     }
 
 }

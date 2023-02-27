@@ -80,7 +80,6 @@ def submit_song():
         if track_title.lower() != song_name.lower():
             recommended_tracks.append(f'{{"title": "{track_title}", "artist": "{artist}", "link": "{track_link}", "id": "{rec_track_id}"}}')
     recommended_tracks_json = {"tracks": recommended_tracks}
-    print(recommended_tracks_json)
     # Return the recommendations response from spotify
     return jsonify(recommended_tracks_json)
 
