@@ -59,5 +59,8 @@ $(document).ready(function(){
     });
     $('#tryit_button').click(function() {
         window.location = 'http://' + location.hostname + '/fvt';
-      });
+    });
+    $('#cta_button').click(function() {
+        window.location = 'http://' + location.hostname + '/fvt';
+    });
 });
