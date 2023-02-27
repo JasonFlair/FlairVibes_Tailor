@@ -194,6 +194,9 @@ form input {
 #tryit_button:active {
     transform: scale(0.90);
 }
+#cta_button:active {
+    transform: scale(0.90);
+}
 
 
 #submit_button:hover {
