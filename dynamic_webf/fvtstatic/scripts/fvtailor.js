@@ -58,6 +58,6 @@ $(document).ready(function(){
         location.reload(true);
     });
     $('#tryit_button').click(function() {
-        window.location = 'http://' + location.hostname + ':5005/fvt';
+        window.location = 'http://' + location.hostname + '/fvt';
       });
 });
