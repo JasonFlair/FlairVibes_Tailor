@@ -20,7 +20,7 @@ $(document).ready(function(){
                 $('section.recommendations').empty();
                 let tracks = response['tracks'];
                 console.log(tracks)
-                let thankYouNote = `<h2 class="thankyounote">Thank you for using FlairVibes Tailor</h2>`
+                let thankYouNote = `<h2 class="thankyounote">Thank you for using Flair Vibes Tailor</h2>`
                 let message = `<h4 class="rectext">Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
                 let goagainButton = `<form>
                     <input type="submit" value="ouu i wanna go again!" id="goagainButton">
