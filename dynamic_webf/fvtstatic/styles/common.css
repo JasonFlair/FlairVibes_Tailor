@@ -88,6 +88,10 @@ img {
   margin-left: -50px;
 }
 
+.my-contacts li {
+    list-style-type: none;
+}
+
 .listtext {
     font-size: smaller;
     margin-top: -1px;
