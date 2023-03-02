@@ -7,9 +7,9 @@ $(document).ready(function(){
         let artistName = $('#artist_name').val();
         query_data['song_name'] = songTitle;
         query_data['artist'] = artistName;
-        console.log(query_data)
 
         $.ajax({
+            // handles the post request for submitting song details and handles rendering of the recommendations
             type: 'POST',
             url: apiUrl,
             contentType: 'application/json',
@@ -21,7 +21,7 @@ $(document).ready(function(){
                 let tracks = response['tracks'];
                 console.log(tracks)
                 let thankYouNote = `<h2 class="thankyounote">Thank you for using Flair Vibes Tailor</h2>`
-                let message = `<h4 class="rectext">Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
+                let message = `<h4 class="recommendation-text">Based on your favourite song, <b>${songTitle}</b>, here are some songs we think you might like!</h4>`;
                 let goagainButton = `<form>
                     <input type="submit" value="ouu i wanna go again!" id="goagainButton">
                 </form>`
@@ -30,7 +30,7 @@ $(document).ready(function(){
                 for (track of tracks) {
                     parsedTrack = JSON.parse(track)
                     let recommendations = `
-                    <ul class="reclist">
+                    <ul class="recommendation-list">
                     <li><b>${parsedTrack['title']}</b> by ${parsedTrack['artist']}
                     <p class="listtext"> listen to <a href="${parsedTrack['link']}" target="_blank"> ${parsedTrack['title']}</a> on spotify</p>
                     </li>
