@@ -2,16 +2,14 @@
 """submits song of the user's choice and
     recommends songs based on similarity"""
 
-from flask import Flask, request, jsonify, abort
-from flask_cors import CORS
-import requests
+from dynamic_webf.api import fvt_views
 import base64
+from flask import request, jsonify, abort
 from os import getenv
+import requests
 
-app = Flask(__name__)
-cors = CORS(app)
 
-@app.route('/submit_song', methods=['POST'], strict_slashes=False)
+@fvt_views.route('/submit_song', methods=['POST'], strict_slashes=False)
 def submit_song():
     """an end point that receives submitted songs and then gets audio info for those songs
         and then makes requests to spotify's recommendations endpoint"""
@@ -83,6 +81,3 @@ def submit_song():
     # Return the recommendations response from spotify
     return jsonify(recommended_tracks_json)
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5006)
