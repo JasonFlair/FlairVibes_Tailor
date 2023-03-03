@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Unified Flask Application """
-from dynamic_webf.api import fvt_views
+from api import fvt_views
 from flask import Flask, make_response, jsonify
 from flask_cors import CORS
 

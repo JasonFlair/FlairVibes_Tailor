@@ -28,7 +28,7 @@ The track details, audio features, and recommendations used in this project are 
    `cd FlairVibes_Tailor`
 3. Run the flask app for the api:
 
-   `CLIENT_ID='your_spotify_clientid' CLIENT_SECRET='your_spotify_clientsecret' python3 -m dynamic_webf.api.app`
+   `CLIENT_ID='your_spotify_clientid' CLIENT_SECRET='your_spotify_clientsecret' python3 -m api.app`
 
 # Author
 Chukwuemelie 'Jason Flair' Obumse. Email - emelieobumse100@gmail.com, Twitter handle - <a href="https://twitter.com/jasonffs_" target="_blank"> My Twitter</a>

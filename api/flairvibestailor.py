@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """handles caching and renders to the flair vibes tailor template file"""
-from dynamic_webf.api import fvt_views
+from api import fvt_views
 from uuid import uuid4
 from flask import render_template
 

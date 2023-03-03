@@ -2,7 +2,7 @@
 """submits song of the user's choice and
     recommends songs based on similarity"""
 
-from dynamic_webf.api import fvt_views
+from api import fvt_views
 import base64
 from flask import request, jsonify, abort
 from os import getenv
