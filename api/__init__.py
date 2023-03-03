@@ -3,7 +3,7 @@
 
 from flask import Blueprint
 
-fvt_views = Blueprint('fvt_views', __name__, url_prefix='/api')
+fvt_views = Blueprint('fvt_views', __name__, url_prefix='/api', static_url_path='fvtstatic')
 
 from api.flairvibestailor import *
 from api.landingpage import *
