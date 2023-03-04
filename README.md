@@ -3,6 +3,8 @@ A simple web application that allows you to submit your favorite song and get re
 
 This project serves as my portfolio project and showcases some of my skills in web development.
 
+Link to the deployed product http://web-01.jasonflair.tech
+
 # Prerequisites
 - Flask (with flask blueprint)
 - Requests
@@ -29,6 +31,17 @@ The track details, audio features, and recommendations used in this project are 
 3. Run the flask app for the api:
 
    `CLIENT_ID='your_spotify_clientid' CLIENT_SECRET='your_spotify_clientsecret' python3 -m api.app`
+
+# How the product works
+<h3>Step 1: Put In Your Favourite Song's Details</h3>
+          <p>Put in the song you can't get enough of right now as well as the artiste who made the song.</p>
+          <img src="api/static/images/snapshot2.PNG" alt="a sample song is inputed in the form" width="80%" height="20%">
+<h3>Step 2: Hit The Submit button to Get Personalized Recommendations</h3>
+          <p>FVT will use Spotify's trusted API with carefully selected paramters to generate a list of songs tailored just for you.</p>
+<h3>Step 3: Listen and Enjoy</h3>
+          <p>Check out the songs we've recommended and discover your new favourite artiste(s) or song(s)!.</p>
+          <img src="api/static/images/snapshot3.PNG" alt="a list of recommendations are generated on screen" width="80%" height="20%">
+
 
 # Author
 Chukwuemelie 'Jason Flair' Obumse. Email - emelieobumse100@gmail.com, Twitter handle - <a href="https://twitter.com/jasonffs_" target="_blank"> My Twitter</a>
