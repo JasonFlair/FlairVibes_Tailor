@@ -1,10 +1,10 @@
 $(document).ready(function(){
     // direct the user to the flair vibes tailor from the landing page whenever any of these buttons is clicked.
     $('#tryit_button').click(function() {
-        window.location = 'http://' + location.hostname + '/';
+        window.location = 'http://' + location.hostname + ':5004/api/fvt';
     });
     $('#cta_button').click(function() {
-        window.location = 'http://' + location.hostname + '/';
+        window.location = 'http://' + location.hostname + ':5004/api/fvt';
     });
 
 

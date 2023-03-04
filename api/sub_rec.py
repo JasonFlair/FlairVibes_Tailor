@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-"""submits song of the user's choice and
-    recommends songs based on similarity"""
+"""this end point makes use of a POST request submiited by AJAX to get details of the song.
+    the details gotten such as song title and artiste name are used to interact with spotify's
+    api in order to get audio features of the song submitted.
+
+    the audio features gotten are further used to interact with spotify's recommendation api.
+
+    :returns {"tracks": recommended_tracks}
+    where recommended tracks is a list comprising the titles of the songs, artiste names and links"""
 
 from api import fvt_views
 import base64
