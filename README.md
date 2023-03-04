@@ -39,7 +39,7 @@ The track details, audio features, and recommendations used in this project are 
 <h3>Step 2: Hit The Submit button to Get Personalized Recommendations</h3>
           <p>FVT will use Spotify's trusted API with carefully selected paramters to generate a list of songs tailored just for you.</p>
 <h3>Step 3: Listen and Enjoy</h3>
-          <p>Check out the songs we've recommended and discover your new favourite artiste(s) or song(s)!.</p>
+          <p>Check out the songs recommended and discover your new favourite artiste(s) or song(s)!.</p>
           <img src="api/static/images/snapshot3.PNG" alt="a list of recommendations are generated on screen" width="80%" height="20%">
 
 
