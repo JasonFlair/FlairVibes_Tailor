@@ -3,7 +3,7 @@ A simple web application that allows you to submit your favorite song and get re
 
 This project serves as my portfolio project and showcases some of my skills in web development.
 
-Link to the deployed product http://web-01.jasonflair.tech
+Link to the deployed product - <a href="http://web-01.jasonflair.tech" target="_blank">Click Me</a>
 
 # Prerequisites
 - Flask (with flask blueprint)
