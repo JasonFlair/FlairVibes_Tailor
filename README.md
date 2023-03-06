@@ -42,7 +42,19 @@ The track details, audio features, and recommendations used in this project are 
           <p>FVT will use Spotify's trusted API with carefully selected paramters to generate a list of songs tailored just for you.</p>
 <h3>Step 3: Listen and Enjoy</h3>
           <p>Check out the songs recommended and discover your new favourite artiste(s) or song(s)!.</p>
-          <img src="api/static/images/snapshot3.PNG" alt="a list of recommendations are generated on screen for you" width="80%" height="20%">
+            <figure>
+              <img src="api/static/images/snapshot3.PNG" alt="a list of recommendations are generated on screen for you" width="80%" height="20%">
+              <figcaption>A list of recommendations is generated and rendered on screen for you.</figcaption>
+            </figure>
+
+
+# Development
+Coding for the music recommender project began on February 10th and is still on going as I'm always looking for ways to improve the application and provide better recommendations for users.
+        <figure>
+            <img src="api/static/images/trello_board.PNG" alt="Trello board of the Flair Vibes Tailor Minimum Viable Product, as at the 20th of February." width="80%" height="20%">
+            <figcaption>Trello board of the Flair Vibes Tailor Minimum Viable Product, as at the 20th of February.</figcaption>
+        </figure>
+
 
 # Technical Challenge During Development 
 While developing the Flair Vibes Tailor, I discovered that creating and maintaining a large music dataset which would have tons of songs with different audio features to be used for generating recommendations, was not practical for me as doing so was beyond my means and that it would be more efficient to use a live dataset that updates in real-time. Due to the fact that I had no knowledge of data science prior to development of the flair vibes tailor, I struggled with using any filtering technique like alternating least squares. This prompted me to find other solutions and I decided to circumvent the challenges by creating a web application that interacts with Spotify's API. This way, I was able to get a live and well maintained dataset, consisting of all the songs available on Spotify and I had access to their audio features. Using Spotify's API, I also had access to an endpoint that uses a combination of collaborative filtering as well as content-based filtering for recommendations as opposed to solely using collaborative filtering with alternating least squares which I found difficult to implement.
