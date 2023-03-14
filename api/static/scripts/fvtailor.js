@@ -1,15 +1,15 @@
 $(document).ready(function(){
     // direct the user to the flair vibes tailor from the landing page whenever any of these buttons is clicked.
     $('#tryit_button').click(function() {
-        window.location = 'http://' + location.hostname + ':5004/api/fvt';
+        window.location = 'http://' + location.hostname + ':5004/fvt';
     });
     $('#cta_button').click(function() {
-        window.location = 'http://' + location.hostname + ':5004/api/fvt';
+        window.location = 'http://' + location.hostname + ':5004/fvt';
     });
 
 
     // code for the flair vibes tailor itself
-    const apiUrl = 'http://' + location.hostname + ':5004/api/submit_song';
+    const apiUrl = 'http://' + location.hostname + ':5004/submit_song';
     let query_data = {}
     $('form#submit_songs').submit(function(event) {
         event.preventDefault();

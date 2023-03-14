@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.register_blueprint(fvt_views)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.errorhandler(404)
 def not_found(error):

@@ -5,7 +5,7 @@ The Flair Vibes Tailor is a simple music recommender I created for music enthusi
 
 As someone who loves music, I've always been interested in the idea of creating a music recommendation system. So, when I reached the final phase of my ALX Africa/Holberton School software engineering foundations sprint where I was required to build a portfolio project, I decided to take go down the path of finally creating my own music recommender.
 
-Link to the deployed product - <a href="http://web-01.jasonflair.tech" target="_blank">Click Me</a>
+Link to the deployed product - <a href="https://jasonflair.pythonanywhere.com/fvt" target="_blank">Click Me</a>
 
 # Prerequisites
 - Flask (with flask blueprint)
