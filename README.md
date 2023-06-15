@@ -65,7 +65,7 @@ To implement this solution, I had to learn how to interact with the Spotify API 
 
 
 # Author
-Chukwuemelie 'Jason Flair' Obumse. Email - emelieobumse100@gmail.com, Twitter handle - <a href="https://twitter.com/jasonffs_" target="_blank"> My Twitter</a>
+Chukwuemelie 'Jason Flair' Obumse. Email - emelieobumse100@gmail.com, Twitter handle - <a href="https://twitter.com/wfmjson" target="_blank"> My Twitter</a>
 
 # License
 This project is open for reading. However, if you wish to use any part of this project for commercial or public use, please obtain permission from the author. Unauthorized use of this project is strictly prohibited.
